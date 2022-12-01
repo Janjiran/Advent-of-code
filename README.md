@@ -1,4 +1,7 @@
-# Advent-of-code
+# 🎄 Advent-of-code 🎄
+
+## Where?
+https://adventofcode.com/2022
 
 ## How to run?
 
