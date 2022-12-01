@@ -1,0 +1,11 @@
+{
+    "compilerOptions": {
+        "module": "NodeNext",
+        "moduleResolution": "NodeNext",
+        "types": ["bun-types"],
+        "target": "ES2020",
+        "sourceMap": true,
+        "outDir": "dist"
+    },
+    "include": ["2022/**/*"]
+}
