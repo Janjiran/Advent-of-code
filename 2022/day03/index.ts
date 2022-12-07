@@ -45,4 +45,28 @@ for (const items of backpacks) {
     finalNumber += score;
 };
 
-console.log(finalNumber);
+console.log(finalNumber)
+
+//////////////////// Second Half ////////////////////
+
+const groups = backpacks.flatMap((b, i, arr) => i % 3 === 0 ? [[arr.at(i), arr.at(i + 1), arr.at(i + 2)]]: []);
+
+let finalScore = 0;
+
+for (const [one, two, three] of groups) {
+
+    let characterInAllStrings: string;
+
+    for (const letter of one) {
+        if (two.indexOf(letter) !== -1 && three.indexOf(letter) !== -1) {
+            characterInAllStrings = letter;
+            break;
+        }
+    }
+
+    const score = getScore(characterInAllStrings);
+    
+    finalScore += score;
+};
+
+console.log(finalScore)
