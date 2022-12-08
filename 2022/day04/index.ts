@@ -26,3 +26,28 @@ for (const pair of pairs) {
 }
 
 console.log(containedRanges);
+
+//////////////////// Second Half ////////////////////
+
+let overlapingRanges = 0;
+
+for (const pair of pairs) {
+  const [section1, section2] = pair.split(",");
+
+  // Define the first range
+  const [start1, end1] = section1.split("-");
+
+  // Define the second range
+  const [start2, end2] = section2.split("-");
+
+  // Check if ranges overlap
+  
+  if (
+    (Number(start1) >= Number(start2) && Number(start1) <= Number(end2)) ||
+    (Number(start2) >= Number(start1) && Number(start2) <= Number(end1))
+  ) {
+    overlapingRanges++;
+  }
+}
+
+console.log(overlapingRanges);
